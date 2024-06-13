@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./Plugins/ScrollSmoother.js"></script>
+    <script src="./Plugins/ScrollTrigger.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
+
+            ScrollSmoother.create({
+                wrapper: "#wrapper",
+                content: "#content",
+                smooth: 1,
+                effects: true
+            });
+        })
+    </script>
+    <div id="wrapper">
+        <div id="content">
+            <div style="height: 100vh; background-color: aqua; display: grid; place-items: center;">
+                <h1>Seção 1</h1>
+            </div>
+            <div style="height: 100vh; background-color: purple; display: grid; place-items: center;">
+                <h1>Seção 2</h1>
+            </div>
+            <div style="height: 100vh; background-color: rgb(136, 255, 0);display: grid; place-items: center;">
+                <h1>Seção 3</h1>
+            </div>
+            <div style="height: 100vh; background-color: rgb(255, 0, 128);display: grid; place-items: center;">
+                <h1>Seção 4</h1>
+            </div>
+            <div style="height: 100vh; background-color: rgb(255, 162, 0);display: grid; place-items: center;">
+                <h1>Seção 5</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
