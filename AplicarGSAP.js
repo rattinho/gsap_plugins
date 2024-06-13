@@ -1,6 +1,6 @@
 const plugins = [
     // "SplitText",
-    "ScrollSmoother",
+    // "ScrollSmoother",
     // "ScrambleText",
     // "PhysicsProps",
     // "Physics2D",
@@ -9,10 +9,19 @@ const plugins = [
     // "Inertia",
     // "GSDevTools",
     // "DrawSVG",
-    "ScrollTrigger"
+    ///////////////////  GRATUTIOS
+    // "ScrollTrigger",
+    // "Text",
+    // "ScrollTo",
+    // "Pixi",
+    // "Observer",
+    // "MotionPath",
+    // "Flip",
+    // "Easel",
+    // "Draggable"
 ]
 
-const url = "localhost"
+const url_rtt = "localhost"
 
 const head = document.head
 
@@ -37,7 +46,7 @@ function loadScripts() {
     return Promise.all(
         plugins.map(plugin => loadPluginContent(plugin).then(content => {
             const script = document.createElement("script")
-            script.innerHTML = content.replace()
+            script.innerHTML = content
             document.head.appendChild(script)
         }).catch(error => {
             console.log(error)
